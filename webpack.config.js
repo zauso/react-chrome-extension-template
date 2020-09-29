@@ -8,6 +8,7 @@ module.exports = {
     path: path.join(__dirname, "/dist"),
     filename: "index.js"
   },
+  devtool: "inline-cheap-source-map",
   module: {
     rules: [
       {
