@@ -35,12 +35,19 @@ module.exports = {
       template: "./src/index.html"
     }),
     new CopyWebpackPlugin({
-		patterns: [{
-			from: './src/config/manifest.json',
-			to: path.join(__dirname, 'dist'),
-			force: true,
-		}]
-	})
+  		patterns: [{
+  			from: './src/config/manifest.json',
+  			to: path.join(__dirname, 'dist'),
+  			force: true,
+  		}]
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: './src/extension/background/background.js',
+        to: path.join(__dirname, 'dist'),
+        force: true,
+      }]
+    })
   ]
 };
 
